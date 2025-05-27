@@ -172,10 +172,10 @@ void vTaskSaida () { // Controlada pelo semáforo de contagem
                     strcpy(status, "Status: 1 vaga");
                 else
                     strcpy(status, "Status: livre");
+            ssd1306_divide_em_4_linhas(&ssd);
             ssd1306_draw_string_escala(&ssd, status, 4, 36, 0.9);
             ssd1306_draw_string_escala(&ssd, "Percentual: ", 4,  20, 0.9);
             ssd1306_draw_string_escala(&ssd, buffer2, 95, 20, 0.9);
-            ssd1306_divide_em_4_linhas(&ssd);
             ssd1306_draw_string_escala(&ssd, "Alunos em sala: ", 4,  4, 0.9);
             ssd1306_draw_string_escala(&ssd, buffer, 112,  4, 0.9);
             ssd1306_draw_string_escala(&ssd, "Aguardando...", 4, 52, 0.9);
